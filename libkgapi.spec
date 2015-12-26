@@ -1,7 +1,7 @@
 Summary:	Library to access various Google services via their public API
 Name:		libkgapi
 Version:	5.1.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.dvratil.cz/category/akonadi-google/
@@ -82,10 +82,10 @@ Currently supported APIs:
 %dependinglibpackage KF5GAPIMaps 5
 %dependinglibpackage KF5GAPITasks 5
 
-%define devname %mklibname kgapi -d
+%define devname %mklibname KF5GAPI -d
 
 %package -n %{devname}
-Summary:	Development files for libkgapi
+Summary:	Development files for %{name}
 Group:		Development/KDE and Qt
 Provides:	%{name}-devel = %{EVRD}
 Requires:	%{mklibname KF5GAPIBlogger 5} = %{EVRD}
@@ -96,9 +96,10 @@ Requires:	%{mklibname KF5GAPIDrive 5} = %{EVRD}
 Requires:	%{mklibname KF5GAPILatitude 5} = %{EVRD}
 Requires:	%{mklibname KF5GAPIMaps 5} = %{EVRD}
 Requires:	%{mklibname KF5GAPITasks 5} = %{EVRD}
+Obsoletes:	%{mklibname kgapi -d} < 5.1.0-2
 
 %description -n %{devname}
-Development files for libkgapi.
+Development files for %{name}.
 
 %files -n %{devname}
 %dir %{_includedir}/KF5/KGAPI
