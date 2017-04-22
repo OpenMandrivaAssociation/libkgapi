@@ -1,11 +1,11 @@
 Summary:	Library to access various Google services via their public API
 Name:		libkgapi
-Version:	5.3.1
+Version:	17.04.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.dvratil.cz/category/akonadi-google/
-Source0:	http://download.kde.org/stable/libkgapi/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5CalendarCore)
@@ -71,16 +71,18 @@ Currently supported APIs:
 %lang(uk) %{_localedir}/uk/LC_MESSAGES/libkgapi_qt.qm
 %lang(ru) %{_localedir}/ru/LC_MESSAGES/libkgapi_qt.qm
 %lang(ar) %{_localedir}/ar/LC_MESSAGES/libkgapi_qt.qm
+%lang(nn) %{_localedir}/nn/LC_MESSAGES/libkgapi_qt.qm
+%lang(sr) %{_localedir}/sr/LC_MESSAGES/libkgapi_qt.qm
 
 
-%dependinglibpackage KF5GAPIBlogger 5
-%dependinglibpackage KF5GAPICalendar 5
-%dependinglibpackage KF5GAPIContacts 5
-%dependinglibpackage KF5GAPICore 5
-%dependinglibpackage KF5GAPIDrive 5
-%dependinglibpackage KF5GAPILatitude 5
-%dependinglibpackage KF5GAPIMaps 5
-%dependinglibpackage KF5GAPITasks 5
+%dependinglibpackage KPimGAPIBlogger 5
+%dependinglibpackage KPimGAPICalendar 5
+%dependinglibpackage KPimGAPIContacts 5
+%dependinglibpackage KPimGAPICore 5
+%dependinglibpackage KPimGAPIDrive 5
+%dependinglibpackage KPimGAPILatitude 5
+%dependinglibpackage KPimGAPIMaps 5
+%dependinglibpackage KPimGAPITasks 5
 
 %define devname %mklibname KF5GAPI -d
 
@@ -102,19 +104,20 @@ Obsoletes:	%{mklibname kgapi -d} < 5.1.0-2
 Development files for %{name}.
 
 %files -n %{devname}
-%dir %{_includedir}/KF5/KGAPI
-%{_includedir}/KF5/KGAPI/KGAPI
-%{_includedir}/KF5/KGAPI/kgapi
-%{_includedir}/KF5/kgapi_version.h
-%{_libdir}/libKF5GAPIBlogger.so
-%{_libdir}/libKF5GAPICalendar.so
-%{_libdir}/libKF5GAPIContacts.so
-%{_libdir}/libKF5GAPICore.so
-%{_libdir}/libKF5GAPIDrive.so
-%{_libdir}/libKF5GAPILatitude.so
-%{_libdir}/libKF5GAPIMaps.so
-%{_libdir}/libKF5GAPITasks.so
-%{_libdir}/cmake/KF5GAPI/*.cmake
+%dir %{_includedir}/KPim/KGAPI
+%{_includedir}/KPim/KGAPI/KGAPI
+%{_includedir}/KPim/KGAPI/kgapi
+%{_includedir}/KPim/kgapi_version.h
+%{_libdir}/libKPimGAPIBlogger.so
+%{_libdir}/libKPimGAPICalendar.so
+%{_libdir}/libKPimGAPIContacts.so
+%{_libdir}/libKPimGAPICore.so
+%{_libdir}/libKPimGAPIDrive.so
+%{_libdir}/libKPimGAPILatitude.so
+%{_libdir}/libKPimGAPIMaps.so
+%{_libdir}/libKPimGAPITasks.so
+%{_libdir}/cmake/KPimGAPI
+%{_libdir}/cmake/KF5GAPI
 %{_libdir}/qt5/mkspecs/modules/*.pri
 
 #----------------------------------------------------------------------------
