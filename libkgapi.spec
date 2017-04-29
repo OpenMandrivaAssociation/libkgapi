@@ -91,14 +91,14 @@ Currently supported APIs:
 Summary:	Development files for %{name}
 Group:		Development/KDE and Qt
 Provides:	%{name}-devel = %{EVRD}
-Requires:	%{mklibname KF5GAPIBlogger 5} = %{EVRD}
-Requires:	%{mklibname KF5GAPICalendar 5} = %{EVRD}
-Requires:	%{mklibname KF5GAPIContacts 5} = %{EVRD}
-Requires:	%{mklibname KF5GAPICore 5} = %{EVRD}
-Requires:	%{mklibname KF5GAPIDrive 5} = %{EVRD}
-Requires:	%{mklibname KF5GAPILatitude 5} = %{EVRD}
-Requires:	%{mklibname KF5GAPIMaps 5} = %{EVRD}
-Requires:	%{mklibname KF5GAPITasks 5} = %{EVRD}
+Requires:	%{mklibname KPimGAPIBlogger 5} = %{EVRD}
+Requires:	%{mklibname KPimGAPICalendar 5} = %{EVRD}
+Requires:	%{mklibname KPimGAPIContacts 5} = %{EVRD}
+Requires:	%{mklibname KPimGAPICore 5} = %{EVRD}
+Requires:	%{mklibname KPimGAPIDrive 5} = %{EVRD}
+Requires:	%{mklibname KPimGAPILatitude 5} = %{EVRD}
+Requires:	%{mklibname KPimGAPIMaps 5} = %{EVRD}
+Requires:	%{mklibname KPimGAPITasks 5} = %{EVRD}
 Obsoletes:	%{mklibname kgapi -d} < 5.1.0-2
 
 %description -n %{devname}
