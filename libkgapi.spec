@@ -6,6 +6,7 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.dvratil.cz/category/akonadi-google/
 Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		adapt-to-changes-in-google-oauth.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5CalendarCore)
@@ -125,6 +126,7 @@ Development files for %{name}.
 
 %prep
 %setup -q
+%apply_patches
 %cmake_kde5
 
 %build
