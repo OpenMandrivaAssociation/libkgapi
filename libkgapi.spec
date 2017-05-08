@@ -1,7 +1,7 @@
 Summary:	Library to access various Google services via their public API
 Name:		libkgapi
 Version:	17.04.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.dvratil.cz/category/akonadi-google/
@@ -100,7 +100,7 @@ Requires:	%{mklibname KPimGAPIDrive 5} = %{EVRD}
 Requires:	%{mklibname KPimGAPILatitude 5} = %{EVRD}
 Requires:	%{mklibname KPimGAPIMaps 5} = %{EVRD}
 Requires:	%{mklibname KPimGAPITasks 5} = %{EVRD}
-Obsoletes:	%{mklibname kgapi -d} < 5.1.0-2
+Obsoletes:	%{mklibname kgapi -d} <= 5.3.1-2
 
 %description -n %{devname}
 Development files for %{name}.
