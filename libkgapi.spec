@@ -16,6 +16,8 @@ BuildRequires:	cmake(Qt5WebKitWidgets)
 BuildRequires:	cmake(Qt5WebEngineWidgets)
 BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5Test)
+Provides:   libkgapi = 5.3.1-1
+Obsoletes:    libkgapi < 5.3.1-1
 
 %description
 LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs
