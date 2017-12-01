@@ -1,6 +1,6 @@
 Summary:	Library to access various Google services via their public API
 Name:		libkgapi
-Version:	17.08.3
+Version:	17.11.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -120,7 +120,6 @@ Development files for %{name}.
 %{_libdir}/libKPimGAPIMaps.so
 %{_libdir}/libKPimGAPITasks.so
 %{_libdir}/cmake/KPimGAPI
-%{_libdir}/cmake/KF5GAPI
 %{_libdir}/qt5/mkspecs/modules/*.pri
 
 #----------------------------------------------------------------------------
