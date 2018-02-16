@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   libkgapi-17.12.1.tar.xz: d8e8176b7f38170874a042a3dea119784edece8a
+sources:
+  libkgapi-17.12.2.tar.xz: 4e964414d937867360661f1394befce27f8e3b8a
