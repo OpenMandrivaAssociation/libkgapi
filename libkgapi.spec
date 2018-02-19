@@ -1,7 +1,7 @@
 Summary:	Library to access various Google services via their public API
 Name:		libkgapi
-Version:	17.04.0
-Release:	3
+Version:	 17.12.2
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.dvratil.cz/category/akonadi-google/
@@ -14,6 +14,8 @@ BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5CalendarCore)
 BuildRequires:	cmake(KF5Contacts)
+BuildRequires:	cmake(KF5KIO)
+BuildRequires:	cmake(KF5WindowSystem)
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5WebKitWidgets)
@@ -124,7 +126,6 @@ Development files for %{name}.
 %{_libdir}/libKPimGAPIMaps.so
 %{_libdir}/libKPimGAPITasks.so
 %{_libdir}/cmake/KPimGAPI
-%{_libdir}/cmake/KF5GAPI
 %{_libdir}/qt5/mkspecs/modules/*.pri
 
 #----------------------------------------------------------------------------
