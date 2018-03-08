@@ -6,10 +6,6 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.dvratil.cz/category/akonadi-google/
 Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
-# (tpg) patches from upstream
-Patch0:		0000-Auth-Adapt-to-changes-in-Google-OAuth-token-retrieva.patch
-Patch1:		0001-Auth-don-t-store-cookies.patch
-Patch3:		0002-Auth-add-URL-bar-and-SSL-indicator-to-the-authentica.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5CalendarCore)
