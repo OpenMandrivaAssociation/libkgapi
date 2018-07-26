@@ -1,6 +1,6 @@
 Summary:	Library to access various Google services via their public API
 Name:		libkgapi
-Version:	 18.04.3
+Version:	18.07.80
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -18,8 +18,7 @@ BuildRequires:	cmake(Qt5WebKitWidgets)
 BuildRequires:	cmake(Qt5WebEngineWidgets)
 BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5Test)
-Provides:   libkgapi = 5.3.1-1
-Obsoletes:    libkgapi < 5.3.1-1
+BuildRequires:	pkgconfig(libsasl2)
 
 %description
 LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs
@@ -36,6 +35,7 @@ Currently supported APIs:
 
 %files
 %{_sysconfdir}/xdg/libkgapi.categories
+%{_libdir}/sasl2/libkdexoauth2.so*
 %lang(mr) %{_localedir}/mr/LC_MESSAGES/libkgapi_qt.qm
 %lang(nds) %{_localedir}/nds/LC_MESSAGES/libkgapi_qt.qm
 %lang(gl) %{_localedir}/gl/LC_MESSAGES/libkgapi_qt.qm
