@@ -20,6 +20,7 @@ BuildRequires:	cmake(Qt5WebEngineWidgets)
 BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5Test)
 BuildRequires:	pkgconfig(libsasl2)
+BuildRequires:	qt5-qtwayland
 
 %description
 LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs
