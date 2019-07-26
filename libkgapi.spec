@@ -2,7 +2,7 @@
 
 Summary:	Library to access various Google services via their public API
 Name:		libkgapi
-Version:	19.04.3
+Version:	19.07.80
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -38,7 +38,7 @@ Currently supported APIs:
   - Drive API v2 (https://developers.google.com/drive/v2/reference)
 
 %files -f %{name}.lang
-%{_sysconfdir}/xdg/libkgapi.categories
+%{_datadir}/qlogging-categories5/libkgapi.categories
 %{_libdir}/sasl2/libkdexoauth2.so*
 
 %dependinglibpackage KPimGAPIBlogger 5
