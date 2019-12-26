@@ -2,12 +2,12 @@
 
 Summary:	Library to access various Google services via their public API
 Name:		libkgapi
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.dvratil.cz/category/akonadi-google/
-Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5CalendarCore)
@@ -88,8 +88,7 @@ Development files for %{name}.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
-%apply_patches
+%autosetup -p1
 %cmake_kde5
 
 %build
