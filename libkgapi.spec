@@ -2,7 +2,7 @@
 
 Summary:	Library to access various Google services via their public API
 Name:		libkgapi
-Version:	22.08.1
+Version:	22.08.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
