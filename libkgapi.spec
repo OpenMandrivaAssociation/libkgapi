@@ -2,8 +2,8 @@
 
 Summary:	Library to access various Google services via their public API
 Name:		libkgapi
-Version:	22.12.3
-Release:	2
+Version:	23.03.90
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.dvratil.cz/category/akonadi-google/
@@ -23,6 +23,14 @@ BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5Test)
 BuildRequires:	pkgconfig(libsasl2)
 BuildRequires:	qt5-qtwayland
+Obsoletes:	%{mklibname KPimGAPIBlogger} < %{EVRD}
+Obsoletes:	%{mklibname KPimGAPICalendar} < %{EVRD}
+Obsoletes:	%{mklibname KPimGAPIContacts} < %{EVRD}
+Obsoletes:	%{mklibname KPimGAPICore} < %{EVRD}
+Obsoletes:	%{mklibname KPimGAPIDrive} < %{EVRD}
+Obsoletes:	%{mklibname KPimGAPILatitude} < %{EVRD}
+Obsoletes:	%{mklibname KPimGAPIMaps} < %{EVRD}
+Obsoletes:	%{mklibname KPimGAPITasks} < %{EVRD}
 
 %description
 LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs
@@ -41,14 +49,14 @@ Currently supported APIs:
 %{_datadir}/qlogging-categories5/libkgapi.categories
 %{_libdir}/sasl2/libkdexoauth2.so*
 
-%dependinglibpackage KPimGAPIBlogger 5
-%dependinglibpackage KPimGAPICalendar 5
-%dependinglibpackage KPimGAPIContacts 5
-%dependinglibpackage KPimGAPICore 5
-%dependinglibpackage KPimGAPIDrive 5
-%dependinglibpackage KPimGAPILatitude 5
-%dependinglibpackage KPimGAPIMaps 5
-%dependinglibpackage KPimGAPITasks 5
+%dependinglibpackage KPim5GAPIBlogger 5
+%dependinglibpackage KPim5GAPICalendar 5
+%dependinglibpackage KPim5GAPICore 5
+%dependinglibpackage KPim5GAPIDrive 5
+%dependinglibpackage KPim5GAPILatitude 5
+%dependinglibpackage KPim5GAPIMaps 5
+%dependinglibpackage KPim5GAPIPeople 5
+%dependinglibpackage KPim5GAPITasks 5
 
 %define devname %mklibname KF5GAPI -d
 
@@ -56,32 +64,33 @@ Currently supported APIs:
 Summary:	Development files for %{name}
 Group:		Development/KDE and Qt
 Provides:	%{name}-devel = %{EVRD}
-Requires:	%{mklibname KPimGAPIBlogger} = %{EVRD}
-Requires:	%{mklibname KPimGAPICalendar} = %{EVRD}
-Requires:	%{mklibname KPimGAPIContacts} = %{EVRD}
-Requires:	%{mklibname KPimGAPICore} = %{EVRD}
-Requires:	%{mklibname KPimGAPIDrive} = %{EVRD}
-Requires:	%{mklibname KPimGAPILatitude} = %{EVRD}
-Requires:	%{mklibname KPimGAPIMaps} = %{EVRD}
-Requires:	%{mklibname KPimGAPITasks} = %{EVRD}
+Requires:	%{mklibname KPim5GAPIBlogger} = %{EVRD}
+Requires:	%{mklibname KPim5GAPICalendar} = %{EVRD}
+Requires:	%{mklibname KPim5GAPICore} = %{EVRD}
+Requires:	%{mklibname KPim5GAPIDrive} = %{EVRD}
+Requires:	%{mklibname KPim5GAPILatitude} = %{EVRD}
+Requires:	%{mklibname KPim5GAPIMaps} = %{EVRD}
+Requires:	%{mklibname KPim5GAPIPeople} = %{EVRD}
+Requires:	%{mklibname KPim5GAPITasks} = %{EVRD}
 Obsoletes:	%{mklibname kgapi -d} <= 5.3.1-2
 
 %description -n %{devname}
 Development files for %{name}.
 
 %files -n %{devname}
-%dir %{_includedir}/KPim/KGAPI
-%{_includedir}/KPim/KGAPI/KGAPI
-%{_includedir}/KPim/KGAPI/kgapi
-%{_includedir}/KPim/kgapi_version.h
-%{_libdir}/libKPimGAPIBlogger.so
-%{_libdir}/libKPimGAPICalendar.so
-%{_libdir}/libKPimGAPIContacts.so
-%{_libdir}/libKPimGAPICore.so
-%{_libdir}/libKPimGAPIDrive.so
-%{_libdir}/libKPimGAPILatitude.so
-%{_libdir}/libKPimGAPIMaps.so
-%{_libdir}/libKPimGAPITasks.so
+%dir %{_includedir}/KPim5/KGAPI
+%{_includedir}/KPim5/KGAPI/KGAPI
+%{_includedir}/KPim5/KGAPI/kgapi
+%{_includedir}/KPim5/kgapi_version.h
+%{_libdir}/libKPim5GAPIBlogger.so
+%{_libdir}/libKPim5GAPICalendar.so
+%{_libdir}/libKPim5GAPICore.so
+%{_libdir}/libKPim5GAPIDrive.so
+%{_libdir}/libKPim5GAPILatitude.so
+%{_libdir}/libKPim5GAPIMaps.so
+%{_libdir}/libKPim5GAPIPeople.so
+%{_libdir}/libKPim5GAPITasks.so
+%{_libdir}/cmake/KPim5GAPI
 %{_libdir}/cmake/KPimGAPI
 %{_libdir}/qt5/mkspecs/modules/*.pri
 
