@@ -2,7 +2,7 @@
 
 Summary:	Library to access various Google services via their public API
 Name:		libkgapi
-Version:	23.04.3
+Version:	23.08.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -81,7 +81,7 @@ Development files for %{name}.
 %dir %{_includedir}/KPim5/KGAPI
 %{_includedir}/KPim5/KGAPI/KGAPI
 %{_includedir}/KPim5/KGAPI/kgapi
-%{_includedir}/KPim5/kgapi_version.h
+%{_includedir}/KPim5/KGAPI/kgapi_version.h
 %{_libdir}/libKPim5GAPIBlogger.so
 %{_libdir}/libKPim5GAPICalendar.so
 %{_libdir}/libKPim5GAPICore.so
@@ -93,6 +93,7 @@ Development files for %{name}.
 %{_libdir}/cmake/KPim5GAPI
 %{_libdir}/cmake/KPimGAPI
 %{_libdir}/qt5/mkspecs/modules/*.pri
+%optional %doc %{_docdir}/qt5/*.{qch,tags}
 
 #----------------------------------------------------------------------------
 
