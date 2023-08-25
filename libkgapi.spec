@@ -23,6 +23,8 @@ BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5Test)
 BuildRequires:	pkgconfig(libsasl2)
 BuildRequires:	qt5-qtwayland
+BuildRequires:	doxygen
+BuildRequires:	qt5-assistant
 Obsoletes:	%{mklibname KPimGAPIBlogger} < %{EVRD}
 Obsoletes:	%{mklibname KPimGAPICalendar} < %{EVRD}
 Obsoletes:	%{mklibname KPimGAPIContacts} < %{EVRD}
