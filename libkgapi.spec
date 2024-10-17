@@ -6,7 +6,7 @@ Version:	23.08.5
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://www.dvratil.cz/category/akonadi-google/
+Url:		https://www.dvratil.cz/category/akonadi-google/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5CoreAddons)
