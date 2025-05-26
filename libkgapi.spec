@@ -4,8 +4,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 
 Summary:	Library to access various Google services via their public API
-Name:		plasma6-libkgapi
-Version:	25.04.0
+Name:		libkgapi
+Version:	25.04.1
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -41,6 +41,21 @@ Obsoletes:	%{mklibname KPimGAPIDrive} < %{EVRD}
 Obsoletes:	%{mklibname KPimGAPILatitude} < %{EVRD}
 Obsoletes:	%{mklibname KPimGAPIMaps} < %{EVRD}
 Obsoletes:	%{mklibname KPimGAPITasks} < %{EVRD}
+# Renamed after 6.0 2015-05-26
+%rename plasma6-libkgapi
+
+# Not a 1:1 replacement, but we need to get rid of old cruft
+Obsoletes: %{mklibname KPim5GAPIBlogger}
+Obsoletes: %{mklibname KPim5GAPICalendar}
+Obsoletes: %{mklibname KPim5GAPICore}
+Obsoletes: %{mklibname KPim5GAPIDrive}
+Obsoletes: %{mklibname KPim5GAPILatitude}
+Obsoletes: %{mklibname KPim5GAPIMaps}
+Obsoletes: %{mklibname KPim5GAPIPeople}
+Obsoletes: %{mklibname KPim5GAPITasks}
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs
@@ -90,6 +105,7 @@ Requires:	%{mklibname KPim6GAPIMaps} = %{EVRD}
 Requires:	%{mklibname KPim6GAPIPeople} = %{EVRD}
 Requires:	%{mklibname KPim6GAPITasks} = %{EVRD}
 Obsoletes:	%{mklibname kgapi -d} <= 6.3.1-2
+Obsoletes:	%{mklibname -d KF5GAPI}
 
 %description -n %{devname}
 Development files for %{name}.
@@ -108,18 +124,3 @@ Development files for %{name}.
 %{_libdir}/libKPim6GAPIPeople.so
 %{_libdir}/libKPim6GAPITasks.so
 %{_libdir}/cmake/KPim6GAPI
-
-#----------------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n libkgapi-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang %{name} --all-name --with-html --with-qt
